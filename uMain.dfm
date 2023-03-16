@@ -25,14 +25,10 @@ object frmMain: TfrmMain
     TabOrder = 0
     object tabProcessamento: TTabSheet
       Caption = 'Processamento'
-      ExplicitTop = 24
-      ExplicitHeight = 467
     end
     object tabConfig: TTabSheet
       Caption = 'Configura'#231#245'es'
       ImageIndex = 1
-      ExplicitTop = 24
-      ExplicitHeight = 467
       object Panel1: TPanel
         Left = 0
         Top = 82
@@ -40,7 +36,6 @@ object frmMain: TfrmMain
         Height = 341
         Align = alLeft
         TabOrder = 0
-        ExplicitHeight = 382
         object GroupBox1: TGroupBox
           Left = 1
           Top = 1
@@ -49,10 +44,6 @@ object frmMain: TfrmMain
           Align = alClient
           Caption = 'Log Processos'
           TabOrder = 0
-          ExplicitLeft = 64
-          ExplicitTop = 72
-          ExplicitWidth = 185
-          ExplicitHeight = 105
           object MemoLog: TMemo
             Left = 2
             Top = 18
@@ -62,10 +53,6 @@ object frmMain: TfrmMain
             Lines.Strings = (
               'MemoLog')
             TabOrder = 0
-            ExplicitLeft = 112
-            ExplicitTop = 104
-            ExplicitWidth = 185
-            ExplicitHeight = 89
           end
         end
       end
@@ -76,7 +63,24 @@ object frmMain: TfrmMain
         Height = 41
         Align = alTop
         TabOrder = 1
-        ExplicitTop = 8
+        object Button1: TButton
+          Left = 112
+          Top = 16
+          Width = 75
+          Height = 25
+          Caption = 'Button1'
+          TabOrder = 0
+          OnClick = Button1Click
+        end
+        object Button2: TButton
+          Left = 296
+          Top = 8
+          Width = 75
+          Height = 25
+          Caption = 'Button2'
+          TabOrder = 1
+          OnClick = Button2Click
+        end
       end
       object Panel3: TPanel
         Left = 0
@@ -85,9 +89,6 @@ object frmMain: TfrmMain
         Height = 41
         Align = alTop
         TabOrder = 2
-        ExplicitLeft = 280
-        ExplicitTop = 88
-        ExplicitWidth = 185
       end
       object Panel4: TPanel
         Left = 0
@@ -96,9 +97,6 @@ object frmMain: TfrmMain
         Height = 41
         Align = alBottom
         TabOrder = 3
-        ExplicitLeft = 280
-        ExplicitTop = 88
-        ExplicitWidth = 185
       end
       object Panel5: TPanel
         Left = 433
@@ -107,8 +105,6 @@ object frmMain: TfrmMain
         Height = 341
         Align = alClient
         TabOrder = 4
-        ExplicitLeft = 273
-        ExplicitWidth = 128
         object GroupBox2: TGroupBox
           Left = 1
           Top = 1
@@ -117,8 +113,6 @@ object frmMain: TfrmMain
           Align = alClient
           Caption = 'Informa'#231#245'es'
           TabOrder = 0
-          ExplicitLeft = 2
-          ExplicitTop = 2
           object MemoInfo: TMemo
             Left = 2
             Top = 18
@@ -128,10 +122,6 @@ object frmMain: TfrmMain
             Lines.Strings = (
               'MemoLog')
             TabOrder = 0
-            ExplicitLeft = 112
-            ExplicitTop = 104
-            ExplicitWidth = 185
-            ExplicitHeight = 89
           end
         end
       end

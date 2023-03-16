@@ -2,7 +2,9 @@ program Prospector_ImportacaoEXE;
 
 uses
   Vcl.Forms,
-  uMain in 'View\uMain.pas' {frmMain};
+  uMain in 'View\uMain.pas' {frmMain},
+  uDownloadArquivos in 'Controller\uDownloadArquivos.pas',
+  uListaArquivos in 'uListaArquivos.pas';
 
 {$R *.res}
 

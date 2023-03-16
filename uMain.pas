@@ -21,6 +21,10 @@ type
     Panel6: TPanel;
     GroupBox2: TGroupBox;
     MemoInfo: TMemo;
+    Button1: TButton;
+    Button2: TButton;
+    procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -32,6 +36,40 @@ var
 
 implementation
 
+uses
+  uDownloadArquivos,uListaArquivos;
+
 {$R *.dfm}
+
+procedure TfrmMain.Button1Click(Sender: TObject);
+const
+             //'https://dadosabertos.rfb.gov.br/CNPJ/Empresas1.zip'
+  SourceFile = 'https://dadosabertos.rfb.gov.br/CNPJ/Cnaes.zip';
+  DestFile = 'E:\Cnaes.zip';
+begin
+  if DownloadFile(SourceFile, DestFile) then
+  begin
+    // A mensagem será exibida após a conclusão do Download.
+    ShowMessage('Download concluído com sucesso!');
+  end
+  else
+    ShowMessage('Erro ao baixar o arquivo ' + SourceFile);
+end;
+
+procedure TfrmMain.Button2Click(Sender: TObject);
+var
+  sArquivos:TArquivos;
+  sLista:TResultArray;
+  I:Integer;
+begin
+  sArquivos := TArquivos.Create;
+  sLista := sArquivos.ListarArquivos;
+
+  showmessage(IntToStr(Length(sLista)));
+  for I := 0 to Length(sLista) - 1 do
+    MemoLog.Lines.Add(sLista[I]);
+
+  sArquivos.Free;
+end;
 
 end.
